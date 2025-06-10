@@ -52,11 +52,13 @@ def remover(estoque):
 def atualizar():
     listar()
     atualizar = input("Qual item deseja atualizar? ")
-    nova_qauntidade = float(input("Digite a nova quantidade: "))
-    novo_valor = float(input("Digite o novo valor: "))
     if atualizar in estoque:
+        nova_qauntidade = float(input("Digite a nova quantidade: "))
+        novo_valor = float(input("Digite o novo valor: "))
         estoque[atualizar] = {nova_qauntidade: novo_valor}
         listar()
+    else:
+        print(f"Item '{atualizar}' não encontrado no estoque.")
 
 
 
